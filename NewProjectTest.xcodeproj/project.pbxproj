@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		B34A37D129C05D3C0095B5D3 /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34A37D029C05D3C0095B5D3 /* UIImage+Extension.swift */; };
+		B34A37D329C061350095B5D3 /* CellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34A37D229C061350095B5D3 /* CellModel.swift */; };
 		B350ACC029BF353600877DB3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B350ACBF29BF353600877DB3 /* AppDelegate.swift */; };
 		B350ACC229BF353600877DB3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B350ACC129BF353600877DB3 /* SceneDelegate.swift */; };
 		B350ACC429BF353600877DB3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B350ACC329BF353600877DB3 /* ViewController.swift */; };
@@ -20,6 +21,7 @@
 
 /* Begin PBXFileReference section */
 		B34A37D029C05D3C0095B5D3 /* UIImage+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
+		B34A37D229C061350095B5D3 /* CellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellModel.swift; sourceTree = "<group>"; };
 		B350ACBC29BF353600877DB3 /* NewProjectTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NewProjectTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B350ACBF29BF353600877DB3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B350ACC129BF353600877DB3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -88,6 +90,7 @@
 			isa = PBXGroup;
 			children = (
 				B350ACD329BF392300877DB3 /* APIModel.swift */,
+				B34A37D229C061350095B5D3 /* CellModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -189,6 +192,7 @@
 				B350ACD429BF392300877DB3 /* APIModel.swift in Sources */,
 				B34A37D129C05D3C0095B5D3 /* UIImage+Extension.swift in Sources */,
 				B350ACC429BF353600877DB3 /* ViewController.swift in Sources */,
+				B34A37D329C061350095B5D3 /* CellModel.swift in Sources */,
 				B350ACC029BF353600877DB3 /* AppDelegate.swift in Sources */,
 				B350ACD629BF393300877DB3 /* APICaller.swift in Sources */,
 				B350ACDC29BF42B300877DB3 /* ViewModel.swift in Sources */,

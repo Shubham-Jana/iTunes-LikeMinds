@@ -7,14 +7,7 @@
 
 import Foundation
 
-struct CellModel {
-  let description: String
-  let collectionPrice: Double
-  let artistName: String
-  let artworkUrl60: URL?
-}
-
-class ViewModel {
+final class ViewModel {
   var model = [CellModel]()
   var imageData: Data? = nil
   
