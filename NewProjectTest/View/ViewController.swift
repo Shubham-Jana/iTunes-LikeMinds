@@ -56,11 +56,11 @@ class ViewController: UIViewController {
   // MARK: - EXTENSIONS
 
 extension ViewController: UITableViewDelegate, UITableViewDataSource {
-
+  
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     return vm.model.count
   }
-
+  
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     let cell = tableView.dequeueReusableCell(withIdentifier: CELL_ID, for: indexPath)
     var configCell = cell.defaultContentConfiguration()
@@ -69,13 +69,10 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     configCell.text = ("Artist name: \(section.artistName)")
     configCell.secondaryText = ("Price: $\(section.collectionPrice)")
     
-    if let url = section.artworkUrl60 {
-      URLSession.shared.dataTask(with: url) { [weak self] data, _, error in
-        guard let data = data, error == nil else {
-          return
-        }
-        self?.vm.imageData = data
-      }.resume()
+    Task {
+      if let url = section.artworkUrl60 {
+        vm.imageData = try? await UIImage().imageData(url: url)
+      }
     }
     
     configCell.image = UIImage(data: vm.imageData ?? Data())
@@ -85,3 +82,6 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
   }
   
 }
+
+
+

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B34A37D129C05D3C0095B5D3 /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34A37D029C05D3C0095B5D3 /* UIImage+Extension.swift */; };
 		B350ACC029BF353600877DB3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B350ACBF29BF353600877DB3 /* AppDelegate.swift */; };
 		B350ACC229BF353600877DB3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B350ACC129BF353600877DB3 /* SceneDelegate.swift */; };
 		B350ACC429BF353600877DB3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B350ACC329BF353600877DB3 /* ViewController.swift */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B34A37D029C05D3C0095B5D3 /* UIImage+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
 		B350ACBC29BF353600877DB3 /* NewProjectTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NewProjectTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B350ACBF29BF353600877DB3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B350ACC129BF353600877DB3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -41,6 +43,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B34A37CF29C05CFE0095B5D3 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				B34A37D029C05D3C0095B5D3 /* UIImage+Extension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 		B350ACB329BF353600877DB3 = {
 			isa = PBXGroup;
 			children = (
@@ -60,12 +70,13 @@
 		B350ACBE29BF353600877DB3 /* NewProjectTest */ = {
 			isa = PBXGroup;
 			children = (
-				B350ACDA29BF395C00877DB3 /* Manager */,
-				B350ACD929BF395500877DB3 /* View */,
-				B350ACD829BF394800877DB3 /* ModelView */,
-				B350ACD729BF393A00877DB3 /* Model */,
 				B350ACBF29BF353600877DB3 /* AppDelegate.swift */,
 				B350ACC129BF353600877DB3 /* SceneDelegate.swift */,
+				B350ACD729BF393A00877DB3 /* Model */,
+				B350ACD929BF395500877DB3 /* View */,
+				B350ACD829BF394800877DB3 /* ViewModel */,
+				B350ACDA29BF395C00877DB3 /* Manager */,
+				B34A37CF29C05CFE0095B5D3 /* Extension */,
 				B350ACC829BF353900877DB3 /* Assets.xcassets */,
 				B350ACCA29BF353900877DB3 /* LaunchScreen.storyboard */,
 				B350ACCD29BF353900877DB3 /* Info.plist */,
@@ -81,12 +92,12 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		B350ACD829BF394800877DB3 /* ModelView */ = {
+		B350ACD829BF394800877DB3 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
 				B350ACDB29BF42B300877DB3 /* ViewModel.swift */,
 			);
-			path = ModelView;
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		B350ACD929BF395500877DB3 /* View */ = {
@@ -176,6 +187,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B350ACD429BF392300877DB3 /* APIModel.swift in Sources */,
+				B34A37D129C05D3C0095B5D3 /* UIImage+Extension.swift in Sources */,
 				B350ACC429BF353600877DB3 /* ViewController.swift in Sources */,
 				B350ACC029BF353600877DB3 /* AppDelegate.swift in Sources */,
 				B350ACD629BF393300877DB3 /* APICaller.swift in Sources */,

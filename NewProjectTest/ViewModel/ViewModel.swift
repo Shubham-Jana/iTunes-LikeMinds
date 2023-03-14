@@ -17,19 +17,19 @@ struct CellModel {
 class ViewModel {
   var model = [CellModel]()
   var imageData: Data? = nil
- 
+  
   public func getData() async {
     do {
       let data = try await APICaller.shared.downloadData()
       model = data.compactMap({
-        CellModel(description: $0.description ?? "Empty",
-                  collectionPrice: $0.collectionPrice ?? 0.0,
-                  artistName: $0.artistName,
-                  artworkUrl60: $0.artworkUrl60 )
+        CellModel(
+          description: $0.description ?? "Empty",
+          collectionPrice: $0.collectionPrice ?? 0.0,
+          artistName: $0.artistName,
+          artworkUrl60: $0.artworkUrl60)
       })
     } catch {
-      print(error)
+      debugPrint(error)
     }
   }
-
 }

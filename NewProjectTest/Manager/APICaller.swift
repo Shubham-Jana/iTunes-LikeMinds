@@ -8,7 +8,8 @@
 import Foundation
 
 enum APIError: Error {
-  case failedURL
+  case invalidURL
+  case invalidResponse
 }
 
 final class APICaller {
@@ -19,10 +20,15 @@ final class APICaller {
   
   public func downloadData() async throws -> [Results] {
     guard let url = URL(string: "https://itunes.apple.com/search?term=adele") else {
-      throw APIError.failedURL
+      throw APIError.invalidURL
     }
     
-    let (data, _) = try await URLSession.shared.data(from: url)
+    let (data, response) = try await URLSession.shared.data(from: url)
+    
+    guard let response = response as? HTTPURLResponse, response.statusCode >= 200 && response.statusCode < 300 else {
+      throw APIError.invalidResponse
+    }
+    
     let result = try JSONDecoder().decode(APIData.self, from: data)
     
     return result.results
